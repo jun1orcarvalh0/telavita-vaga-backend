@@ -51,6 +51,7 @@ INSTALLED_APPS.extend(
 # Project apps.
 INSTALLED_APPS.extend(
     [
+        'departments.apps.DepartmentsConfig'
     ]
 )
 
