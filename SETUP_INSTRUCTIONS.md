@@ -6,6 +6,8 @@
  * A referência com SwaggerUI está disponível na rota docs/swagger
 
 ## Configuração e Inicialização:
+Antes de tudo, você deve renomear o arquivo ```.env.example``` localizado em /api para ```.env``` para que o docker possa encontrar as variáveis de ambiente referentes a api e ao banco.
+
 Para rodar o sistema localmente será necessário ter na máquina o [Docker](https://www.docker.com/), todo o processo de configuração do Docker poderá ser encontrado no site oficial.
 
 Com o Docker instalado e configurado, execute o seguinte comando:
