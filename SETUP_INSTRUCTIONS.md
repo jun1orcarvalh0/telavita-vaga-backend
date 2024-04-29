@@ -2,6 +2,7 @@
 
 ## Sobre o projeto:
  * O projeto foi desenvolvido utilizando a arquitetura de apps (models, serializers e views) do Django. A única app criada é a departments que envolve tanto os departamentos (departments) quanto os colaboradores de um departamento (employees)
+ * Optei por deixar tudo em uma mesma app porque o projeto era pequeno e não dependia de outras models ou regras de negócio. Contudo, poderíamos ter duas apps separadas (departmens e employees).
  * A referência com SwaggerUI está disponível na rota docs/swagger
 
 ## Configuração e Inicialização:
