@@ -45,7 +45,6 @@ INSTALLED_APPS.extend(
     [
         'rest_framework',
         'drf_yasg',
-        'django_filters',
     ]
 )
 
