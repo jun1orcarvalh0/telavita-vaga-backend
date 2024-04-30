@@ -4,6 +4,8 @@ Projeto de modelagem de dados e criação de uma API utilizando Python e qualque
 
 **Este projeto é parte do processo de seleção de desenvolvedor backend da [Telavita](https://telavita.com.br).**
 
+```A documentação sobre como configurar e rodar o projeto localmente está no arquivo SETUP_INSTRUCTIONS.md```
+
 ## Sobre o projeto
 
 A ACMEVita está expandindo seus negócios e precisa de um sistema para gerenciar seus departamentos, colaboradores e dependentes.
