@@ -4,7 +4,7 @@ from departments.factories import DepartmentFactory
 
 class DepartmentTestCases(APITestCase):
     def setUp(self):
-        self.url = '/departments/'
+        self.url = '/core/departments'
 
     def test_create_department(self):
         response = self.client.post(self.url, {'name': 'HR'})
@@ -27,7 +27,7 @@ class DepartmentTestCases(APITestCase):
 
 class EmployeeTestCases(APITestCase):
     def setUp(self):
-        self.url = '/departments/employees'
+        self.url = '/core/employees'
         self.department = DepartmentFactory(name="HR")
 
     def test_create_employee(self):

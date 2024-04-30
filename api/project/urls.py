@@ -22,7 +22,7 @@ from drf_yasg import openapi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('departments/', include('departments.urls'))
+    path('core/', include('departments.urls'))
 ]
 
 # Swagger.
