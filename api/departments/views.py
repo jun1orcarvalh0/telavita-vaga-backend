@@ -1,6 +1,8 @@
 from rest_framework import viewsets, mixins, status
 from rest_framework.exceptions import ValidationError
 from django_filters.rest_framework import DjangoFilterBackend
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 from departments import models, serializers
 
 class DepartmentView(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.ListModelMixin):
@@ -32,3 +34,11 @@ class EmployeeView(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.List
             raise ValidationError(content, code=status.HTTP_400_BAD_REQUEST)
 
         return self.queryset.filter(department_id=department_id)
+    
+    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter('department_id', openapi.IN_QUERY, description="ID do Departamento", type=openapi.TYPE_INTEGER, required=True)
+        ]
+    )
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
