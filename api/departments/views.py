@@ -1,4 +1,5 @@
-from rest_framework import viewsets, mixins
+from rest_framework import viewsets, mixins, status
+from rest_framework.exceptions import ValidationError
 from django_filters.rest_framework import DjangoFilterBackend
 from departments import models, serializers
 
@@ -23,3 +24,11 @@ class EmployeeView(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.List
         elif self.action == 'create':
             return serializers.EmployeeSerializer
         return serializers.EmployeeSerializer
+    
+    def get_queryset(self):
+        department_id = self.request.query_params.get('department_id')
+        if not department_id:
+            content = {'detail': 'O parâmetro "department_id" é obrigatório para esta consulta.'}
+            raise ValidationError(content, code=status.HTTP_400_BAD_REQUEST)
+
+        return self.queryset.filter(department_id=department_id)
