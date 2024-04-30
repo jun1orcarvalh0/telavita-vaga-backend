@@ -22,8 +22,8 @@ docker-compose up -d
 * Com o container rodando, A api estará disponível na url: ```http://localhost:8000/```.
 * Para todos os exemplos abaixo adicione a url acima + rota.
 * A referência com SwaggerUI está disponível na rota ```docs/swagger``` (A partir do Swagger é possível visualizar tanto as rotas disponíveis para departamentos e colaboradores).
-* Os departamentos estão na rota ```departments```.
-* Os colaboradores estão na rota ```departments/employees```.
+* Os departamentos estão na rota ```core/departments```.
+* Os colaboradores estão na rota ```core/employees```.
 
 ## Rodar os testes:
 Para rodar os testes você deve primeiramente entrar no container app (certifique-se de estar na pasta principal do projeto):
