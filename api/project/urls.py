@@ -28,9 +28,9 @@ urlpatterns = [
 # Swagger.
 schema_view = get_schema_view(
     openapi.Info(
-        title='Levita Management API',
+        title='Telavita Management API',
         default_version='v1',
-        description='Levita Management Swagger',
+        description='Telavita Management Swagger',
         contact=openapi.Contact(email="juniorcarvalhodev@gmail.com")
     ),
    public=True,
